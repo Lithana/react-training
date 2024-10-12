@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Password Validation</title>
+    <script>
+        function validatePassword() {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+
+            // Check if the passwords match
+            if (password1 === password2) {
+                window.location.href = "success.html";
+            } else {
+                window.location.href = "error.html";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Password Checker</h2>
+    <form onsubmit="validatePassword(); return false;">
+        <label for="password1">Enter Password:</label>
+        <input type="password" id="password1" required><br><br>
+
+        <label for="password2">Re-enter Password:</label>
+        <input type="password" id="password2" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
